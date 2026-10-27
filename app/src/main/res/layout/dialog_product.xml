@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+        <EditText android:id="@+id/productNameInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Product name" android:inputType="textCapSentences" />
+        <Spinner android:id="@+id/productCategoryInput" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <Spinner android:id="@+id/productUnitInput" android:layout_width="match_parent" android:layout_height="wrap_content" />
+        <EditText android:id="@+id/minimumStockInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Minimum stock level (0 or more)" android:inputType="numberDecimal" />
+        <TextView android:id="@+id/batchHeading" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Initial purchase batch" android:textStyle="bold" android:textSize="18sp" android:paddingTop="12dp" />
+        <EditText android:id="@+id/quantityInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Purchased quantity (greater than 0)" android:inputType="numberDecimal" />
+        <EditText android:id="@+id/priceInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Purchase price (optional)" android:inputType="numberDecimal" />
+        <Button android:id="@+id/purchaseDateButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Purchase date" android:textAllCaps="false" />
+        <Button android:id="@+id/expiryDateButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Expiry date" android:textAllCaps="false" />
+    </LinearLayout>
+</ScrollView>

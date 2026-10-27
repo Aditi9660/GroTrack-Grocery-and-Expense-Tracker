@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GroTrack</string>
+    <string name="app_tagline">Track Smart. Waste Less.</string>
+    <string name="splash_screen_description">GroTrack grocery basket logo</string>
 </resources>

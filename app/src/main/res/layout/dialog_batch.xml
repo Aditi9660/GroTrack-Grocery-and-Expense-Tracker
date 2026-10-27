@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+    <EditText android:id="@+id/batchQuantityInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Purchased quantity (greater than 0)" android:inputType="numberDecimal" />
+    <EditText android:id="@+id/batchPriceInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Purchase price (optional)" android:inputType="numberDecimal" />
+    <Button android:id="@+id/batchPurchaseDateButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Purchase date" android:textAllCaps="false" />
+    <Button android:id="@+id/batchExpiryDateButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Expiry date" android:textAllCaps="false" />
+</LinearLayout>

@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/grotrack_background" android:padding="16dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal">
+        <Button android:id="@+id/inventoryHomeButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="0dp" android:text="‹ Home" android:textAllCaps="false" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:text="My Inventory" android:textColor="@color/grotrack_dark_green" android:textSize="24sp" android:textStyle="bold" />
+    </LinearLayout>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Keep track of every batch at home." android:textColor="@color/grotrack_secondary" android:textSize="14sp" android:paddingBottom="8dp" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="2">
+        <TextView android:id="@+id/dashboardProducts" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:padding="14dp" android:layout_marginEnd="5dp" android:background="@color/grotrack_light_green" android:text="Products\n0" android:textSize="16sp" android:textColor="@color/grotrack_dark_green" android:textStyle="bold" />
+        <TextView android:id="@+id/dashboardExpiring" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:padding="14dp" android:layout_marginStart="5dp" android:background="#FFF4D8" android:text="Near expiry\n0 batches" android:textSize="16sp" android:textColor="#8A5A00" android:textStyle="bold" />
+    </LinearLayout>
+    <TextView android:id="@+id/dashboardExpired" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Expired with stock: 0   •   Below minimum: 0" android:textColor="@color/grotrack_secondary" android:paddingTop="8dp" android:paddingBottom="8dp" />
+    <Button android:id="@+id/addProductButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Add grocery product" />
+    <EditText android:id="@+id/searchInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Search product name" android:singleLine="true" android:inputType="text" />
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:fillViewport="false" android:scrollbars="none">
+        <com.google.android.material.chip.ChipGroup android:id="@+id/categoryFilterGroup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingVertical="4dp" app:singleSelection="true" app:selectionRequired="true" xmlns:app="http://schemas.android.com/apk/res-auto" />
+    </HorizontalScrollView>
+    <Spinner android:id="@+id/statusFilter" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <TextView android:id="@+id/emptyMessage" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="No groceries yet. Add a product to get started." android:textColor="#68756B" android:padding="20dp" android:visibility="gone" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/inventoryList" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:clipToPadding="false" android:paddingTop="6dp" />
+</LinearLayout>

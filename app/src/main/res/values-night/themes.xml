@@ -1,7 +1,14 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.GroTrack" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your dark theme here. -->
-        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+<resources>
+    <style name="Base.Theme.GroTrack" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/grotrack_green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/grotrack_dark_green</item>
+        <item name="android:colorAccent">@color/grotrack_green</item>
+        <item name="android:windowBackground">@color/grotrack_background</item>
+        <item name="android:statusBarColor">@color/grotrack_background</item>
+        <item name="android:navigationBarColor">@color/grotrack_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="materialButtonStyle">@style/Widget.GroTrack.Button</item>
     </style>
 </resources>

@@ -2,4 +2,13 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="grotrack_green">#2E7D32</color>
+    <color name="grotrack_dark_green">#1B5E20</color>
+    <color name="grotrack_light_green">#E8F5E9</color>
+    <color name="grotrack_background">#F7FAF7</color>
+    <color name="grotrack_card">#FFFFFFFF</color>
+    <color name="grotrack_text">#26332A</color>
+    <color name="grotrack_secondary">#718071</color>
+    <color name="grotrack_warning">#F9A825</color>
+    <color name="grotrack_expired">#D32F2F</color>
 </resources>

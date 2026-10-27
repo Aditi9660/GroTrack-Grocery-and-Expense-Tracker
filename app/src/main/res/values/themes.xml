@@ -1,9 +1,28 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.GroTrack" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<resources>
+    <style name="Base.Theme.GroTrack" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/grotrack_green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/grotrack_dark_green</item>
+        <item name="android:colorAccent">@color/grotrack_green</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/grotrack_background</item>
+        <item name="android:navigationBarColor">@color/grotrack_background</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowBackground">@color/grotrack_background</item>
+        <item name="materialButtonStyle">@style/Widget.GroTrack.Button</item>
     </style>
-
     <style name="Theme.GroTrack" parent="Base.Theme.GroTrack" />
+    <style name="Widget.GroTrack.Button" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/grotrack_green</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="Theme.GroTrack.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/grotrack_dark_green</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_grotrack_logo</item>
+        <item name="windowSplashScreenIconBackgroundColor">@color/grotrack_light_green</item>
+        <item name="postSplashScreenTheme">@style/Theme.GroTrack</item>
+    </style>
 </resources>

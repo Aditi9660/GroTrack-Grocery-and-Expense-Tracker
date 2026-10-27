@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp" app:cardCornerRadius="16dp" app:cardElevation="2dp" app:cardBackgroundColor="@color/grotrack_card">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="14dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+            <TextView android:id="@+id/itemName" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Product" android:textStyle="bold" android:textSize="18sp" android:textColor="#24372B" />
+            <TextView android:id="@+id/itemStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fresh" android:textStyle="bold" />
+        </LinearLayout>
+        <TextView android:id="@+id/itemMeta" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#45564A" android:paddingTop="4dp" />
+        <TextView android:id="@+id/itemDates" android:layout_width="match_parent" android:layout_height="wrap_content" android:textColor="#68756B" android:textSize="12sp" android:paddingTop="3dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <Button android:id="@+id/consumeBatchButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:minHeight="44dp" android:text="Consume" android:textAllCaps="false" />
+            <Button android:id="@+id/wasteBatchButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:minHeight="44dp" android:text="Record Waste" android:textAllCaps="false" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="end">
+            <Button android:id="@+id/addBatchButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="44dp" android:text="Add batch" android:textAllCaps="false" />
+            <Button android:id="@+id/editProductButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="44dp" android:text="Edit" android:textAllCaps="false" />
+            <Button android:id="@+id/deleteProductButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="44dp" android:text="Delete" android:textAllCaps="false" />
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

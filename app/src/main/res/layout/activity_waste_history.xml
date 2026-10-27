@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="16dp" android:background="@color/grotrack_background">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Waste History" android:textSize="26sp" android:textStyle="bold" android:textColor="@color/grotrack_dark_green" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Recorded waste transactions" android:textColor="@color/grotrack_secondary" android:paddingBottom="8dp" />
+    <Spinner android:id="@+id/wasteProductFilter" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <Button android:id="@+id/wasteFromDateButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="From: all dates" android:textAllCaps="false" />
+        <Button android:id="@+id/wasteToDateButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="To: all dates" android:textAllCaps="false" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+        <Button android:id="@+id/clearWasteFiltersButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Clear filters" android:textAllCaps="false" />
+        <Button android:id="@+id/backFromWasteButton" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Back" android:textAllCaps="false" />
+    </LinearLayout>
+    <TextView android:id="@+id/wasteEmptyMessage" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="No waste records match these filters." android:textColor="#68756B" android:padding="20dp" android:visibility="gone" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/wasteHistoryList" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:clipToPadding="false" />
+</LinearLayout>
